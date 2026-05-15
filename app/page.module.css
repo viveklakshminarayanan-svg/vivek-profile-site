@@ -1,0 +1,471 @@
+/* ── HERO ───────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 88vh;
+  padding: 0 3rem;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem 5rem 0;
+  border-right: 1px solid var(--border);
+}
+
+.eyebrowTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.eyebrowTag::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4.2vw, 4.2rem);
+  line-height: 1.06;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1.8rem;
+}
+
+.heroDesc {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: var(--muted);
+  max-width: 420px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.btnRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: var(--ink);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+
+.btnPrimary:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--ink);
+  padding: 0.85rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 500;
+  border: 1px solid var(--ink);
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btnSecondary:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ── HERO RIGHT ─────────────────────────────────────────── */
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 0 5rem 4rem;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+.stat {
+  background: var(--paper);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statNum {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.skillPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill {
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.9rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: var(--paper);
+  font-weight: 400;
+}
+
+/* ── SHARED SECTION ─────────────────────────────────────── */
+.section {
+  padding: 6rem 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.sectionEyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionEyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+/* ── EXPERTISE ──────────────────────────────────────────── */
+.expertiseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.expCard {
+  background: var(--paper);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.expCard:hover {
+  background: #fff;
+}
+
+.expNum {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--border);
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.expIcon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+}
+
+.expCardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.expCardDesc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ── WRITING ────────────────────────────────────────────── */
+.writingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.articleCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.articleCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+}
+
+.articleTitle {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.articleExcerpt {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+  font-weight: 300;
+  flex: 1;
+}
+
+.readMore {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 500;
+  display: inline-block;
+  transition: letter-spacing 0.2s;
+}
+
+.articleCard:hover .readMore {
+  letter-spacing: 0.15em;
+}
+
+.viewAllWrap {
+  margin-top: 2.5rem;
+}
+
+.viewAll {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  border-bottom: 1px solid var(--gold-light);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.viewAll:hover {
+  border-color: var(--gold);
+}
+
+/* ── CONTACT ────────────────────────────────────────────── */
+.contactRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contactLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  width: 72px;
+  flex-shrink: 0;
+  font-weight: 400;
+}
+
+.contactLink {
+  font-size: 0.95rem;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: var(--gold);
+}
+
+.contactCta {
+  background: var(--ink);
+  color: #fff;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.ctaDesc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 300;
+  max-width: 300px;
+}
+
+.btnWhite {
+  background: #fff;
+  color: var(--ink);
+  padding: 0.85rem 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btnWhite:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .expertiseGrid {
+    grid-template-columns: 1fr;
+  }
+  .expNum {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 0 1.5rem;
+  }
+  .heroLeft {
+    padding: 3.5rem 0 2.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .heroRight {
+    padding: 2.5rem 0 3.5rem;
+  }
+  .section {
+    padding: 4rem 1.5rem;
+  }
+  .writingGrid {
+    grid-template-columns: 1fr;
+  }
+  .contactRow {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .statGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+}
+
