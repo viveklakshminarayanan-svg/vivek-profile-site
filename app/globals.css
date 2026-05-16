@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,16 +7,11 @@
 }
 
 :root {
-  --ink: #0e0e0e;
-  --paper: #f5f2ed;
-  --gold: #c9a84c;
-  --gold-light: #f0e4c0;
-  --muted: #6b6b6b;
-  --card-bg: #ffffff;
-  --border: #e0dcd5;
-  --border-dark: #c8c3bb;
+  --navy: #1a2744;
+  --gold: #b8973a;
+  --gold-light: rgba(184, 151, 58, 0.15);
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 html {
@@ -24,10 +19,10 @@ html {
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
   font-family: var(--font-body);
-  font-weight: 400;
+  background: #ffffff;
+  color: #0e0e0e;
+  font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,3 +37,4 @@ img {
   max-width: 100%;
   display: block;
 }
+
