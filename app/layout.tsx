@@ -1,26 +1,33 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
-  weight: ['400', '700'],
+  weight: ['400', '500'],
   style: ['normal', 'italic'],
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  variable: '--font-inter',
   weight: ['300', '400', '500'],
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Vivek Lakshminarayanan | Digital Product Leader',
+  title: 'Vivek Lakshminarayanan — Digital Product Leader',
   description:
-    'Digital Product Leader specialising in enterprise data platforms, analytics, governance, and AI enablement.',
+    'Analytical Mind. Strategic Thinker. Purpose Driven. Digital product leader specialising in enterprise data platforms, analytics governance, and AI enablement.',
+  openGraph: {
+    title: 'Vivek Lakshminarayanan — Digital Product Leader',
+    description:
+      'Building analytics-driven digital products that create real business impact.',
+    url: 'https://vivek-profile-site.vercel.app',
+    siteName: 'Vivek Lakshminarayanan',
+  },
 }
 
 export default function RootLayout({
@@ -29,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   )
